@@ -1,10 +1,14 @@
-Code for paper "Evidential time-to-event prediction with calibrated uncertainty quantification"
-The Python code implements an evidential regression model specically designed for time-to-event prediction. The model computes a degree of belief for the event time occurring within a time interval, without any strict distribution assumption. Meanwhile, the proposed model quanti es both epistemic and aleatory uncertainties using Gaussian Random Fuzzy Numbers and belief functions, providing clinicians with uncertainty-aware survival time predictions.
+🧠 Evreg
+This repository contains the Python implementation of the evidential regression model for time-to-event prediction, proposed in our paper:
+
+"Evidential time-to-event prediction with calibrated uncertainty quantification"
+
+The model computes a degree of belief for the event time occurring within a time interval, without any strict distributional assumption. It quantifies both epistemic and aleatory uncertainties using Gaussian Random Fuzzy Numbers and belief functions, enabling clinicians to make uncertainty-aware survival predictions.
 
 If you find this code useful and use it in your own research, please cite the following papers:
 
 ######### Citing this paper ########
-}
+```bash
 @article{huang2025evidential,
   title={Evidential time-to-event prediction with calibrated uncertainty quantification},
   author={Huang, Ling and Xing, Yucheng and Mishra, Swapnil and Den{\oe}ux, Thierry and Feng, Mengling},
@@ -13,3 +17,4 @@ If you find this code useful and use it in your own research, please cite the fo
   year={2025},
   publisher={Elsevier}
 }
+```
