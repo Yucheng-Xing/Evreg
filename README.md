@@ -8,7 +8,7 @@ The model computes a degree of belief for the event time occurring within a time
 
 If you find this code useful and use it in your own research, please cite the following papers:
 
-######### Citing this paper ########
+######### Cite our work ########
 ```bash
 @inproceedings{huang2024evidential,
   title={An evidential time-to-event prediction model based on Gaussian random fuzzy numbers},
