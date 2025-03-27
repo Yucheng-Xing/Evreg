@@ -10,6 +10,14 @@ If you find this code useful and use it in your own research, please cite the fo
 
 ######### Citing this paper ########
 ```bash
+@inproceedings{huang2024evidential,
+  title={An evidential time-to-event prediction model based on Gaussian random fuzzy numbers},
+  author={Huang, Ling and Xing, Yucheng and Denoeux, Thierry and Feng, Mengling},
+  booktitle={International Conference on Belief Functions},
+  pages={49--57},
+  year={2024},
+  organization={Springer}
+}
 @article{huang2025evidential,
   title={Evidential time-to-event prediction with calibrated uncertainty quantification},
   author={Huang, Ling and Xing, Yucheng and Mishra, Swapnil and Den{\oe}ux, Thierry and Feng, Mengling},
