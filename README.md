@@ -1,4 +1,5 @@
-🧠 Evreg
+# Evreg
+
 This repository contains the Python implementation of the evidential regression model for time-to-event prediction, proposed in our paper:
 
 "Evidential time-to-event prediction with calibrated uncertainty quantification"
