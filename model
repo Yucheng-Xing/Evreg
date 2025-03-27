@@ -76,9 +76,8 @@ class Evreg(nn.Module):
         hx = torch.sum(a * H, dim=1)
         hx = torch.clamp(hx, min=1e-8)
         mu = torch.mm(input, self.beta.T) + self.alpha.expand(nt, -1)
-        #mu = self.mlp(input)
-        mux = torch.sum(mu * a * H, dim=1) / (hx)
-        sig2x = torch.sum((self.sig ** 2).expand(nt, -1) * (a ** 2) * (H ** 2), dim=1) / (hx ** 2)
+        mux = torch.sum(mu * a * H, dim=1) / hx
+        sig2x = torch.sum((self.sig ** 2).expand(nt, -1) * (a ** 2) * (H ** 2), dim=1) / hx ** 2
 
         return {"mux": mux, "sig2x": sig2x, "hx": hx}
     
@@ -103,7 +102,7 @@ class Evreg(nn.Module):
 
 
         # Bel
-        eps = 1e-4 * torch.std(y)  # 1e-2* torch.std(y)#1e-4* torch.std(y) ###-2 for gaussian, -4 for seer
+        eps = 1e-4 * torch.std(y)
         norm_dist = Normal(mux, sigx)
         Fy1 = norm_dist.cdf(y) - pl * Normal(mux, sig1).cdf(y)
         Sy1 = 1 - Fy1
